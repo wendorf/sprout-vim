@@ -5,4 +5,4 @@ install:
   - sudo ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future bundle install
   - sudo rm -rf /Users/travis/.vim # Gets in the way of sprout-vim::config recipe
 script:
-  - bundle exec rake ci
+  - travis_wait 50 bundle exec rake ci
